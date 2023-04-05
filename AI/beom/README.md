@@ -287,4 +287,5 @@ plt.show()
 ~~~
 
 <br/>결과 화면
+
 <img src="my_func.png"/>
