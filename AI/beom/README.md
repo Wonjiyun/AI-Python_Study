@@ -289,3 +289,93 @@ plt.show()
 <br/>결과 화면
 
 <img src="my_func.png"/>
+
+<br/>내장 함수를 이용한 최솟값 구하기
+
+~~~
+min_val = min(y)
+print(min_val)
+~~~
+
+> 8
+
+<h6>특정 구간 내에서 최소값 구하기</h6>
+
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def get_minimum(x1, x2, f):
+    x = np.arange(x1, x2, 0.01)
+    y = f(x)
+    plt.plot(x, y)
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('get_minimum')
+    plt.show()
+    return min(y)
+def my_func(x):
+    a = 1
+    b = -3
+    c = 10
+    return a*x**2 + b*x + c
+print(get_minimum(1, 4, my_func))
+~~~
+
+> 7.75
+
+<img src="get_minimum.png"/>
+
+### 지수함수 / 로그함수
+
+ - 지수함수-로그함수는 역함수 관계(y=x 직선 대칭 단, 밑이 같을 때)
+ - 파이썬으로 직접 구현 가능
+
+<h6>지수함수</h6>
+
+ - y = a^z(a != 0 )(기본형)
+ - y = e^z(e = 2.71828...)
+
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def exponential_function(x):
+    a = 4
+    return a**x
+print(exponential_function(4))
+print(exponential_function(0))
+~~~
+
+>256<br/>1
+
+<br/>그래프 출력
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def exponential_function(x):
+    a = 4
+    return a**x
+x = np.arange(-3, 2, 0.1)
+y = exponential_function(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.ylim(-1, 15)
+plt.xlim(-4, 3)
+plt.title('exponential function')
+plt.show()
+~~~
+
+결과 화면
+
+<img src="exponential_function.png"/>
+<br/>
+
+### 계산할 수 있는 것들
+ - 밑이 e인 지수함수 표현 가능
+ - 역함수 관계
+ - 극한
+ - 미분
+ - 기울기

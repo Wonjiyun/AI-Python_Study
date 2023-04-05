@@ -48,20 +48,75 @@
 # plt.title('Cubic Function')
 # plt.show()
 
+# import math
+# import numpy as np
+# import matplotlib.pyplot as plt
+# def my_func(x):
+#     a = 1
+#     b = -3
+#     c = 10
+#     return a*x**2 + b*x + c
+# x = np.arange(-10, 10)
+# y = my_func(x)
+# plt.plot(x, y)
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.scatter(1.5, my_func(1.5))
+# plt.text(1.5-1.5, my_func(1.5)+10, "min value of f(x)\n({}, {})".format(1.5, my_func(1.5)), fontsize=10)
+# plt.title('my_func')
+# # plt.show()
+
+# min_val = min(y)
+# print(min_val)
+
+# import math
+# import numpy as np
+# import matplotlib.pyplot as plt
+# def get_minimum(x1, x2, f):
+#     x = np.arange(x1, x2, 0.01)
+#     y = f(x)
+#     plt.plot(x, y)
+#     plt.xlabel('x')
+#     plt.ylabel('y')
+#     plt.title('get_minimum')
+#     plt.show()
+#     return min(y)
+# def my_func(x):
+#     a = 1
+#     b = -3
+#     c = 10
+#     return a*x**2 + b*x + c
+# print(get_minimum(1, 4, my_func))
+
+
+# import math
+# import numpy as np
+# import matplotlib.pyplot as plt
+# def exponential_function(x):
+#     a = 4
+#     return a**x
+# x = np.arange(-3, 2, 0.1)
+# y = exponential_function(x)
+# plt.plot(x, y)
+# plt.xlabel('x')
+# plt.ylabel('y')
+# plt.ylim(-1, 15)
+# plt.xlim(-4, 3)
+# plt.title('exponential function')
+# plt.show()
+
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-def my_func(x):
-    a = 1
-    b = -3
-    c = 10
-    return a*x**2 + b*x + c
-x = np.arange(-10, 10)
-y = my_func(x)
+def exponential_function(x):
+    a = 4
+    return a**x
+x = np.arange(-3, 2, 0.1)
+y = exponential_function(x)
 plt.plot(x, y)
 plt.xlabel('x')
 plt.ylabel('y')
-plt.scatter(1.5, my_func(1.5))
-plt.text(1.5-1.5, my_func(1.5)+10, "min value of f(x)\n({}, {})".format(1.5, my_func(1.5)), fontsize=10)
-plt.title('my_func')
+plt.ylim(-1, 15)
+plt.xlim(-4, 3)
+plt.title('exponential function')
 plt.show()
