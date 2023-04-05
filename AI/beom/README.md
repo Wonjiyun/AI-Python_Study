@@ -84,18 +84,18 @@ print(x)
  - 인공지능 분야에서 쓰이는 알고리즘
  - ***'인간의 뇌 구조를 모방'*** (뉴런과 뉴런 사이에는 전기신호를 통해 정보를 전달)
 <br/>
-<img src="1.png"/>
+<img src="Neuron.png"/>
 <h6>구조를 단순화하여 모델링한 구조</h6>
 
  - 입력(inputs)과 가중치(weights)를 곱한 선형구조(linear)
  - 활성화 함수(activation function)를 통한 비선형 구조(non-linear) 표현 가능
 
 <br/>
-<img src="2.png"/>
+<img src="Bioloical_Neuron.png"/>
 
 <h4>인공뉴련 VS 인공 신경망</h4>
 
-<img src="3.png"/>
+<img src="Artificial_Neuron.png"/>
 
 ### 인공 뉴런(Artificial Neuron)
 </br>- 노드(Node)와 엣지(Edge)로 표현
@@ -117,7 +117,7 @@ print(x)
 
 총 3 * 4 * 4 * 1 = 48개의 선으로 연결
 
-<img src="4.png"/>
+<img src="Fully-Connected-Layer.png"/>
 
 ### 신경망의 활용
 
@@ -138,3 +138,153 @@ print(x)
  - 꽃잎 모양, 색깔에 따른 꽃의 종 분류
 <br>
 이미지 출처: https://wikidocs.net/164363, https://www.researchgate.net/figure/Graphical-representation-of-a-single-neuron-and-an-artificial-neural-network_fig6_326005988, https://cs231n.github.io/convolutional-networks/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+###  2023년 4월 5일 인공지능 스터디
+
+라이브러리 import
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def linear_function(x):
+    a = 0.5
+    b = 2
+    return a*x + b
+print(linear_function(5))
+~~~
+
+### 일차함수
+
+ - y = ax + b
+(a:기울기, b:y 절편)
+
+ - 그래프 상에서 직선인 그래프(linear)
+<br/>그래프 출력
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def linear_function(x):
+    a = 0.5
+    b = 2
+    return a*x + b
+x = np.arange(-5, 5, 0.1)
+y = linear_function(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Linear Function')
+plt.show()
+~~~
+결과 화면
+<img src="Linear_Function.png"/>
+
+### 이차함수
+
+ - y = ax^2 + bx + c
+ - 일반적으로 두 개의 실근을 가짐
+
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def quadratic_function(x):
+    a = 1
+    b = -1
+    c = -2
+    return a*x**2 + b*x + c
+print(quadratic_function(2))
+~~~
+
+> 0
+
+<br/>그래프 출력
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def quadratic_function(x):
+    a = 1
+    b = -1
+    c = -2
+    return a*x**2 + b*x + c
+x = np.arange(-5, 5, 0.1)
+y = quadratic_function(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Quadratic Function')
+plt.show()
+~~~
+
+결과 화면
+<img src="Quadratic_Function.png"/>
+
+### 삼차함수(다항함수)
+
+ - y = ax^3 + bx^2 + cx +d
+
+
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def cubic_function(x):
+    a = 4
+    b = 0
+    c = -1
+    d = -8
+    return a*x**3 + b*x**2 + c*x + d
+print(cubic_function(3))
+~~~
+>97
+
+<br/>그래프 출력
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def cubic_function(x):
+    a = 4
+    b = 0
+    c = -1
+    d = -8
+    return a*x**3 + b*x**2 + c*x + d
+x = np.arange(-5, 5, 0.1)
+y = cubic_function(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Cubic Function')
+plt.show()
+~~~
+
+결과 화면
+<img src="Cubic_Functino.png"/>
+
+### 함수의 최소값/최대값
+
+함수의 최솟값
+~~~
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+def my_func(x):
+    a = 1
+    b = -3
+    c = 10
+    return a*x**2 + b*x + c
+x = np.arange(-10, 10)
+y = my_func(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.scatter(1.5, my_func(1.5))
+plt.text(1.5-1.5, my_func(1.5)+10, "min value of f(x)\n({}, {})".format(1.5, my_func(1.5)), fontsize=10)
+plt.title('my_func')
+plt.show()
+~~~
+
+<br/>결과 화면
+<img src="my_func.png"/>
