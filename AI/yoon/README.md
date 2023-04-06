@@ -428,8 +428,8 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use(['seaborn-witegrid'])
-</pre>
-</code>
+</code></pre>
+
 
 <h3>일차함수</h3>
 
@@ -441,12 +441,12 @@ def linear_function(x):
    a = 0.5
    b = 2
    return a*x + b
-</pre>
-</code>
+</code></pre>
+
 <pre><code> 
 pirnt(linear_function(5)) //x에 5를 넣은 채로 return 식 계산
 -> 4.5
-</pre></code>
+</code></pre>
 <pre><code>
 x = np.arange(-5, 5, 0.1) //start: -5, stop: 5, step: 0.1
 y = linear_funtion(x)
@@ -456,7 +456,7 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Linear Function')
 plt.show()
-</pre></code>
+</code></pre>
 
 <h3>이차함수</h3>
 
@@ -469,12 +469,12 @@ def quadratic_function(x):
    c = -2
 
    return a*x**2 + b*x +c
-</pre>
-</code>
+</code></pre>
+
 <pre><code> 
 print(quadratic_function(2))
 -> 0
-</pre></code>
+</code></pre>
 <pre><code> 
 x = np.arange(-5, 5, 0.1)
 y = quadratic_function(x)
@@ -484,7 +484,7 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Quadratic Function')
 plt.show()
-</pre></code>
+</code></pre>
 
 <h3>삼차함수(다항함수)</h3>
 
@@ -497,12 +497,12 @@ def cubic_function(x):
    d = -8
    
    return a*x**3 + b*x**2 + c*x +d
-</pre> 
-</code>
+</code></pre> 
+
 <pre><code> 
 print(cubic_function(3))
 -> 97
-</pre></code>
+</code></pre>
 <pre><code> 
 x = np.arange(-5, 5, 0.1)
 y = cubic_function(x)
@@ -512,7 +512,7 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Cubic Function')
 plt.show()
-</pre></code>
+</code></pre>
 
 <h3>함수의 최소값/최대값</h3>
 <pre><code> 
@@ -522,7 +522,7 @@ def my_function(x):
    c = 10
 
    return a*x**2 + b*x + c
-</pre></code>
+</code></pre>
 <pre><code> 
 x = np.arange(-10, 10, 0.1)
 y = my_function(x)
@@ -534,12 +534,12 @@ plt.scatter(1.5, my_function(1.5)) //최저점 점으로 표시(1.5, 1.5 넣었�
 plt.text(1.5-1.5, my_function(1.5)+10, 'min value of f(x)\n{}'.format(1.5, my_function(1.5)), fontsize=10)
 plt.title('My function')
 plt.show()
-</pre></code>
+</code></pre>
 <pre><code> 
 min_val = min(y) //min함수: 최소값
 print(min_val)
 -> 7.75
-</pre></code>
+</code></pre>
 
 <h3>특정 구간 내에서 최소값 구하기</h3>
 <pre><code> 
@@ -558,7 +558,7 @@ return min(y)
 <pre><code> 
 print(get_minimum(1, 4, my_function))
 -> 7.75
-</pre></code>
+</code></pre>
 
 <h3>지수함수/로그함수</h3>
 
@@ -573,12 +573,11 @@ print(get_minimum(1, 4, my_function))
 def exponential_function(x):
    a = 4
    return a**x
-</pre>
-</code>
+</code></pre>
 <pre><code> 
 print(exponential_function(4))
 print(exponential_function(0))
-</pre></code>
+</code></pre>
 <pre><code> 
 x = np.arange(-3, 2, 0.1)
 y = exponential_function(x)
@@ -590,19 +589,20 @@ plt.ylim(-1, 15) //y값 -1~15로 범위 지정
 plt.xlim(-4, 3) //x값 -4~3로 범위 지정
 plt.title('exponential_function')
 plt.show()
-</pre></code>
+</code></pre>
 <pre><code> 
 def exponential_function2(x):
    a = 4
    return math.pow(a, x)
-</pre></code>
+</code></pre>
 <pre><code> 
 print(exponential_function(4))
 print(exponential_function(0))
 
 -> 256.0
    1.0
-</pre></code>
+</code>
+</pre>
 
 <h3>밑이 e인 지수함수 표현</h3>
 <pre><code> 
@@ -611,7 +611,7 @@ print(np.exp(4))
 
 -> 54.598150033144236
    54.598150033144236
-</pre></code>
+</code></pre>
 
 <h3>로그함수</h3>
 
@@ -626,8 +626,8 @@ print(np.log(4)) //맡이 자동으로 2라고 지정
 -> 0.6309287535714574
    2.0
    1.3862943611198906
-</pre>
-</code>
+</code></pre>
+
 
 <h3>역함수 관계</h3>
 
@@ -650,8 +650,8 @@ plt.axhline(y=0, color='k') //0을 중심으로 y축
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
-</pre>
-</code>
+</code></pre>
+
 
 <h3>함수 조작</h3>
 
@@ -674,8 +674,8 @@ plt.xlim(-0.3, 1.4)
 plt.ylim(-0.5, 4)
 plt.scatter(0.5, -np.log(0.5)) //대칭되는 지점 0.5를 점으로 표현
 plt.show()
-</pre>
-</code>
+</code></pre>
+
 
 <h3>극한</h3>
 
@@ -688,8 +688,8 @@ init_printing()
 
 x, y, z = xymbols('x y z')
 a, b, c, t = symbols('a b c t')
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → 1 (x^3−1 / x−1) = 3
 <pre><code> 
@@ -697,24 +697,24 @@ print("극한값:", limit(x**3-1) / (x-1), x, 1)
 
 plot(((x**3-1) / (x-1)), xlim=(-5, 5), ylim=(-1, 10));
 -> 3
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → ∞ (1+x / x)
 <pre><code> 
 print("극한값:", limit(1 + x) / x, x, oo) //oo = 무한대
 
 plot((1+x) / x, xlim=(-10, 10), ylim=(-5, 5));
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → 1 ((√x+3)−2 / x−1) = 14
 <pre><code> 
 print("극한값:", limit((sqrt(x+3)-2) / (x-1), x, 1))
 
 plot((sqrt(x+3)-2) / (x-1), xlim=(-5, 12), ylim=(-0.5, 1));
-</pre>
-</code>
+</code></pre>
+
 
 <h3>삼각함수의 극한</h3>
 
@@ -725,24 +725,24 @@ print("극한값:", limit(tan(x), x, pi/2, '+'))
 print("극한값:", limit(tan(x), x, pi/2, '-'))
 
 plot(tan(x), xlim=(-3.14), ylim=(-6, 6));
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → 0 (sinxx)=1
 <pre><code> 
 print("극한값:", limit(sin(x)/x, x, 0))
 
 plot(sin(x)/x, ylim=(-2, 2));
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → 0 xsin(1/x)
 <pre><code> 
 print("극한값:", limit(x * sin(1/x), x, 0))
 
 plot(x*sin(1/x), xlim=(-2, 2), ylim=(-1, 1.5));
-</pre>
-</code>
+</code></pre>
+
 
 <h3>지수함수, 로그함수의 극한</h3>
 
@@ -753,8 +753,8 @@ print("극한값:", limit((2**x - 2**(-x)) / (2**x + 2**(-x)), x, oo))
 plot((2**x - 2**(-x)) / (2**x + 2**(-x), xlim=(-10, 10), ylim==(-3, 3));
 
 -> 극한값: 1
-</pre>
-</code>
+</code></pre>
+
 
 * lim x → ∞ (log2(x+1) − log2(x))=0
 <pre><code> 
@@ -763,8 +763,8 @@ print("극한값:", limit( log(x+1, 2) - log(x, 2), x, oo))
 plot( log(x, 2), log(x+1, 2), xlim=(-4, 6), ylim(-4, 4));
 
 -> 극한값: 0 // 두 개의 로그함수가 0으로 극한하고 있음을 볼 수 있음
-</pre>
-</code>
+</code></pre>
+
 
 <h3>자연로그(e)의 밑</h3>
 
@@ -784,8 +784,8 @@ plot(ln(1+x) / x, xlim=(-4, 6), ylim=(-2, 8));
    (2): exp(2)
    (3): 1
    (4): 1
-</pre>
-</code>
+</code></pre>
+
 
 <h3>미분</h3>
 
@@ -803,8 +803,8 @@ plot(ln(1+x) / x, xlim=(-4, 6), ylim=(-2, 8));
 def numerical_differential(f, x):
    h = 1e-4
    return(f(x+h)-f(x-h)) /  (2*h)
-</pre>
-</code>
+</code></pre>
+
 
 <h3>함수 위의 점  (a,b) 에서의 접선의 방정식</h3>
 
@@ -812,12 +812,13 @@ def numerical_differential(f, x):
 <pre><code> 
 def my_fun(x):
    return 2*x**2 + 3*x +2
-</pre>
-</code>
+</code></pre>
+
 <pre><code> 
 def linear_func(a, b, c, x):
    return c*(x-a) +b
-</pre></code>
+</code>
+</pre>
 <pre><code> 
 c = numericla_differential(my_func, 1)
 
@@ -830,7 +831,7 @@ plt.scatter(1, my_func(1))
 plt.plot(x, my_func(x), x, y, 'r-')
 plt.title('f(x) & linear function')
 plt.show()
-</pre></code>
+</code></pre>
 
 <h3>미분 공식</h3>
 
@@ -850,8 +851,9 @@ plt.show()
 * ex) f(x0, x1)=x0^2 + x1^2
 <pre><code> 
 
-</pre>
 </code>
+</pre>
+
 <pre><code> 
 
 </pre></code>
