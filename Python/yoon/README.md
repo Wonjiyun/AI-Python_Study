@@ -192,3 +192,134 @@ perfect_juice = add_sugar(cold_juice)
 print(perfect_juice)
 </code>
 </pre>
+
+<h2>4월 3일 python 노마드</h2>
+
+<h3>IF</h3>
+<pre><code>
+if condition: 
+  "write the code to run" //condition을 만족하면 print할 문장 
+
+ex)
+a = 10
+
+if 10 == 10:
+  print("True!")
+
+-> True!
+</code></pre>
+
+<h3>Else & Elif</h3>
+<pre><code>
+ex)
+password_correct = True
+
+if password_correct:
+  print("Here is your money")
+else: //if의 조건이 false일 때
+print("Wrong password")
+
+-> Here is your money
+</code></pre>
+<pre><code>
+ex)
+password_correct = False
+
+if password_correct:
+  print("Here is your money")
+else: //if의 조건이 false일 때
+print("Wrong password")
+
+-> Wrong password
+</code></pre>
+
+<pre><code>
+ex)
+winner = 10
+
+if winner > 10:
+  print("Winner is greater than 10")
+elif winner < 10: //elif는 또 다른 대안과 조건을 넣을 수 있도록 한다.
+  pirnt("Winner is less than 10")
+else: 
+  print("Winner is 10")
+
+-> Winner is 10
+// python은 먼저 if의 조건문을 읽는다 다음 elif의 조건문을 읽는다.
+</code></pre>
+ex)
+winner = 20
+
+if winner > 10: //if 조건이 true라면 뒷부분의 조건은 동작하지 않는다.
+  print("Winner is greater than 10")
+elif winner < 10: //elif는 또 다른 대안과 조건을 넣을 수 있도록 한다.
+  pirnt("Winner is less than 10")
+else: 
+  print("Winner is 10")
+
+-> Winner is greater than 10
+
+<h3>Recap</h3>
+<h3>And & Or</h3>
+<pre><code>
+age = input("How old are you?") //input은 오직 하나의 argument만 받는다
+
+print("user answer", age)
+print(type(age))
+
+-> How old are you? [입력 받기] 12
+   user answer 12
+   < class 'str' > //sting type
+</code></pre>
+string을 숫자로 변환
+<pre><code>
+age = int(input("How old are you?"))
+
+if age < 18:
+  print("You can't drink.")
+else:
+  print(Go ahead")
+
+-> How old are you?
+   16 [입력 받기]
+   You can't drink
+</code></pre>
+<pre><code>
+age = int(input("How old are you?"))
+
+if age < 18:
+  print("You can't drink.")
+elif age > 18 and age < 35: // and일 경우 앞 뒤 조건 둘 다 True여야 True임 하나라도 False면 False임
+  print("You drink beer")
+elif age == 60 or age == 70: // or일 경우 앞 뒤 조건 둘 중 하나만 True여도 True임
+  pring("Birthday party!")
+else:
+  print(Go ahead")
+
+-> How old are you?
+   60 [입력 받기]
+   Birthday party!
+</code></pre>
+True and True == True
+False and True == False
+True and False == False
+False and False == False
+
+True or True == True
+True or False == True
+False or True == True
+False or False == False
+
+<h3></h3>
+<h3></h3>
+<h3></h3>
+<pre><code>
+</code></pre>
+<pre><code>
+</code><pre>
+<pre><code>
+</code><pre>
+<pre><code>
+</code><pre>
+<pre><code>
+</code><pre>
